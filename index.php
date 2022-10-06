@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edit this template
--->
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-        <?php
-        // put your code here
-        ?>
-    </body>
-</html>
+<?php
+header("Content-type: application/json");
+$myObj=new \stdClass();
+
+$myObj->id = rand(1000,9999);
+$myObj->age = rand(10, 50);
+$myObj->income = rand(10000, 50000);
+
+
+$myJSON = json_encode($myObj);
+echo $myJSON;
+
+
